@@ -13,3 +13,6 @@ vim.keymap.set('n', '<leader>O', ':put! _<CR>')
 
 --make file executable 
 vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', {silent = true})
+
+-- switch from terminal mode to normal mode
+vim.api.nvim_set_keymap('t', 'jj', [[<C-\><C-n>]], { noremap = true, silent = true })

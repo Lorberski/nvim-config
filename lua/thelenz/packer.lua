@@ -26,12 +26,22 @@ return require('packer').startup(function(use)
 	use ( 'tpope/vim-fugitive')
 	use {
 		"williamboman/mason.nvim",
-		run = ":MasonUpdate" -- optional: aktualisiert Registry automatisch
+		run = ":MasonUpdate" 
 	}
 
 	use {
 		"williamboman/mason-lspconfig.nvim",
-		requires = { "neovim/nvim-lspconfig" } -- sicherstellen, dass lspconfig da ist
+		requires = { "neovim/nvim-lspconfig" } 	
 	}
 	use { 'neovim/nvim-lspconfig' }
+
+
+
+
+	use 'hrsh7th/nvim-cmp'          -- Autocomplete engine
+	use 'hrsh7th/cmp-nvim-lsp'      -- LSP Quelle für nvim-cmp
+	use 'L3MON4D3/LuaSnip'          -- Snippet Engine
+	use 'saadparwaiz1/cmp_luasnip'  -- Snippet Completion Quelle
+	use 'hrsh7th/cmp-buffer'        -- Buffer completion source
+	use 'hrsh7th/cmp-path'          -- Pfad Completion Quelle
 end)
